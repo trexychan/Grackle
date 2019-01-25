@@ -11,8 +11,10 @@ public class pistol_shooting : MonoBehaviour
 	public float     	reload_time;
 	public AudioClip 	gunshot;
 	public AudioClip    reload;
+	public AudioClip 	out_of_ammo;
 	public AudioSource  gunshot_source;
 	public AudioSource  reload_source;
+	public AudioSource  out_of_ammo_source;
 
 	private int 	 	loaded_ammo;
 	private float 		reloading_timer;
@@ -34,13 +36,18 @@ public class pistol_shooting : MonoBehaviour
 			gunshot_source.Play();
 		}
 
-		if ( reloading_timer <= 0 && Input.GetKeyDown( KeyCode.R ) )
+		else if ( reloading_timer <= 0 && Input.GetMouseButtonDown(0) )
+		{
+			out_of_ammo_source.Play();
+		}
+
+		else if ( reloading_timer <= 0 && Input.GetKeyDown( KeyCode.R ) )
 		{
 			loaded_ammo = max_ammo;	
 			reload_source.Play();
 			reloading_timer = reload_time;
 		}
-		if ( reloading_timer > 0 ) 
+		else if ( reloading_timer > 0 ) 
 		{
 			reloading_timer = reloading_timer - ( 1 * Time.deltaTime );
 		}

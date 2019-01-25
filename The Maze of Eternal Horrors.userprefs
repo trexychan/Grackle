@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\pistol_shooting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Normal\MK_Normal-Diffuse.shader">
     <Files>
-      <File FileName="Assets\Scripts\pistol_shooting.cs" Line="45" Column="63" />
+      <File FileName="Assets\Scripts\pistol_shooting.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\bullet_script.cs" Line="1" Column="1" />
       <File FileName="..\Roll a Ball\Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
       <File FileName="..\Roll a Ball\Assets\Shoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Normal\MK_Normal-Diffuse.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
