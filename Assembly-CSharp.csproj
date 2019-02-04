@@ -127,9 +127,10 @@
      <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Scripts\bullet_script.cs" />
-     <Compile Include="Assets\Scripts\exit_script.cs" />
+     <Compile Include="Assets\Scripts\EventManager.cs" />
+     <Compile Include="Assets\Scripts\ExitScript.cs" />
      <Compile Include="Assets\Scripts\pistol_shooting.cs" />
-     <Compile Include="Assets\Scripts\skull_pickup.cs" />
+     <Compile Include="Assets\Scripts\SkullPickup.cs" />
      <None Include="Assets\Downloaded Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Downloaded Assets\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Illumin\MK_Illumin-Glossy.shader" />
      <None Include="Assets\Downloaded Assets\_MK\MKGlowFree\Shader\Render\MKGlowBlurInc.cginc" />

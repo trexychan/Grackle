@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class exit_script : MonoBehaviour
+public class ExitScript : MonoBehaviour
 {
     private AudioSource audioSrc;
 
@@ -10,7 +10,7 @@ public class exit_script : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        skull_pickup.OnPickup += Exit;
+        EventManager.OnSkullsCollected += Exit;
     }
 
     void Exit()

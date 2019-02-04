@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class skull_pickup : MonoBehaviour
+public class SkullPickup : MonoBehaviour
 {
     private static int skullCount;
     private static int skullInitial;
-    private AudioSource audioSrc;
 
-    public delegate void PickupAction();
-    public static event PickupAction OnPickup;
+    private AudioSource audioSrc;
+    private MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
+        meshRenderer = GetComponent<MeshRenderer>();
         skullCount++;
         skullInitial++;
     }
@@ -25,11 +25,12 @@ public class skull_pickup : MonoBehaviour
         {
             audioSrc.pitch = (1 - ((float)skullCount / skullInitial)) * 2 + 1;
             audioSrc.Play();
-            skullCount--;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            meshRenderer.enabled = false;
 
-            if (OnPickup != null && skullCount == 0)
-                OnPickup();
+            skullCount--;
+
+            if (skullCount == 0)
+                EventManager.SkullsCollected();
 
             Destroy(gameObject, audioSrc.clip.length);
         }
