@@ -127,6 +127,7 @@
      <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Scripts\bullet_script.cs" />
+     <Compile Include="Assets\Scripts\ghostAgent.cs" />
      <Compile Include="Assets\Scripts\pistol_shooting.cs" />
      <Compile Include="Assets\Scripts\testAgent.cs" />
      <None Include="Assets\Downloaded Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
