@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class pistol_shooting : MonoBehaviour
+public class pistol_shooting : MonoBehaviour, Gun
 {
 	public GameObject 	bullet;
 	public int 			bullet_speed;
-	public int	 		max_ammo;
 	public float     	reload_time;
 	public AudioClip 	gunshot;
 	public AudioClip    reload;
@@ -16,19 +15,15 @@ public class pistol_shooting : MonoBehaviour
 	public AudioSource  reload_source;
 	public AudioSource  out_of_ammo_source;
 
-	private int 	 	loaded_ammo;
-	private float 		reloading_timer;
-
-
 	void Start()
 	{
-		loaded_ammo = max_ammo;
 		gunshot_source.clip = gunshot;
 		reload_source.clip = reload;
 	}
-
+	/*
 	void Update()
 	{
+		
 		if ( reloading_timer <= 0 && Input.GetMouseButtonDown(0) && loaded_ammo > 0 )
 		{
 			Instantiate( bullet, transform.position, transform.rotation );
@@ -51,6 +46,21 @@ public class pistol_shooting : MonoBehaviour
 		{
 			reloading_timer = reloading_timer - ( 1 * Time.deltaTime );
 		}
-				
+	}
+*/	
+	public void Fire()
+	{
+		Instantiate( bullet, transform.position, transform.rotation );
+		gunshot_source.Play();
+	}
+
+	public void OutOfAmmo()
+	{
+		out_of_ammo_source.Play();
+	}
+
+	public void Reload()
+	{
+		reload_source.Play();
 	}
 }
