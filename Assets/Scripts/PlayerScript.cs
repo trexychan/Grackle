@@ -79,7 +79,7 @@ public class PlayerScript : MonoBehaviour
 
 	void SetShotgunActive()
 	{
-		currentWeapon = (Gun)shotgun.GetComponent<shotgun_shooting>();
+		currentWeapon = shotgun.GetComponent<shotgun_shooting>();
 		ammo = Global.shotgun_ammo;
 		capacity = Global.shotgun_capacity;
 		loaded_ammo = Global.loaded_shotgun_ammo;
