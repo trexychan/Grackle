@@ -9,6 +9,7 @@ public class shotgun_shooting : MonoBehaviour, Gun
 	public GameObject 	bullet;
 	public int			bulletsPerShot;
 	public int 			bullet_speed;
+	public float     	reload_time;
 	public AudioClip 	gunshot;
 	public AudioClip    reload;
 	public AudioClip 	out_of_ammo;
@@ -21,7 +22,9 @@ public class shotgun_shooting : MonoBehaviour, Gun
 
 	void Start()
 	{
-		bullets = new List<Quaternion>(bulletsPerShot);
+		gunshot_source.clip = gunshot;
+		reload_source.clip = reload;
+		bullets = new List<Quaternion>(8);
 		for (int i = 0; i < bulletsPerShot; i++)
 		{
 			bullets.Add(Quaternion.Euler(Vector3.zero));
@@ -30,14 +33,13 @@ public class shotgun_shooting : MonoBehaviour, Gun
 
 	public void Fire()
 	{
-		Debug.Log("Fire");
 		for (int i = 0; i < bulletsPerShot; i++)
         {
-			Debug.Log("new bullet");
             bullets[i] = Random.rotation;
             GameObject p = Instantiate(bullet, transform.position, transform.rotation);
             p.transform.rotation = Quaternion.RotateTowards(p.transform.rotation, bullets[i], spreadAngle);
-            //p.GetComponent<Rigidbody>().AddForce(p.transform.right * bullet_speed);
+            p.GetComponent<Rigidbody>().AddForce(p.transform.right * bullet_speed);
+            i++;
         }
 		gunshot_source.Play();
 		
