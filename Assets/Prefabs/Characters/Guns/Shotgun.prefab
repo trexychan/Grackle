@@ -50,14 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4328216172794215079, guid: 87a3b1c1519c22a46b27c38efd60459b, type: 3}
   bulletsPerShot: 20
-  bullet_speed: 1
-  reload_time: 0
   gunshot: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
-  reload: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
-  out_of_ammo: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
+  reload: {fileID: 8300000, guid: 687edab7cd84ade40b113a31368d41bf, type: 3}
+  out_of_ammo: {fileID: 8300000, guid: be0b0da4f0289d744a5b16551b0e9693, type: 3}
   gunshot_source: {fileID: 668456442562330796}
-  reload_source: {fileID: 668456442562330796}
-  out_of_ammo_source: {fileID: 668456442562330796}
+  reload_source: {fileID: 8793259594168874881}
+  out_of_ammo_source: {fileID: 520357719990910078}
   spreadAngle: 6
 --- !u!82 &668456442562330796
 AudioSource:
@@ -165,7 +163,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 687edab7cd84ade40b113a31368d41bf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -261,7 +259,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be0b0da4f0289d744a5b16551b0e9693, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
