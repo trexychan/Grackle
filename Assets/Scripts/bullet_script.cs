@@ -27,6 +27,9 @@ public class bullet_script : MonoBehaviour
 
 	void OnTriggerEnter( Collider other )
 	{
-		Destroy( gameObject );
+		if ( other.tag != "bullet" )
+		{
+			Destroy( gameObject );
+		}
 	}
 }
