@@ -8,6 +8,8 @@ public class PlayerScript : MonoBehaviour
 	public GameObject shotgun;
 	public GameObject rpg;
 
+	public Canvas deathScreen;
+
 	private float reloading_timer = 0;
 	private Gun currentWeapon;
 	private int ammo;
@@ -88,5 +90,19 @@ public class PlayerScript : MonoBehaviour
 		shotgun.SetActive(true);
 		//rpg.SetActive(false);
 		Debug.Log("set Shotgun active");
+	}
+
+
+
+    void OnTriggerEnter( Collider other )
+	{
+		if ( other.tag.Equals("Ghost") )
+		{
+
+			Debug.Log("Crickey mate");
+			deathScreen.gameObject.SetActive(true);
+			Time.timeScale = 0f;
+		}
+		Debug.Log("whopps");
 	}
 }
