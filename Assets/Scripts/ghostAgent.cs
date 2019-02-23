@@ -16,6 +16,8 @@ public class ghostAgent : MonoBehaviour
     private float timer;
     private float timeSet = 0.2f;
     private RaycastHit hit;
+    private int lastmode = 0;
+    private float stall = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class ghostAgent : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (mode == 0) {
             // Chase
@@ -40,7 +42,7 @@ public class ghostAgent : MonoBehaviour
                 timer = timeSet;
                 agent.destination = target.position;
             }
-        } else {
+        } else if (mode == 1) {
             // Patrol
             Vector3 r = agent.destination - transform.position;
             r.y = 0;
@@ -51,6 +53,15 @@ public class ghostAgent : MonoBehaviour
                 }
                 agent.destination = waypoints[curWaypoint].position;
             }
+        } else {
+            if ( stall == 0 )
+            {
+                stall = 1f;
+                mode = lastmode;
+            }
+            else {
+                stall = stall - Time.deltaTime;
+            }
         }
 
         seePlayer = false;
@@ -59,5 +70,16 @@ public class ghostAgent : MonoBehaviour
                 seePlayer = true;
             }
         }
+    }
+
+    void OnTriggerEnter( Collider other )
+    {
+        if ( other.tag.Equals("bullet") )
+        {
+            Debug.Log("shot");
+            lastmode = mode;
+            mode = 0;
+        }
+        
     }
 }
