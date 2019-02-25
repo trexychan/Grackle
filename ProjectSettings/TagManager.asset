@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
   - bullet
-  - wall
   - Ghost
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -17,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Ghost
-  - SpecialWall
-  - Player
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
