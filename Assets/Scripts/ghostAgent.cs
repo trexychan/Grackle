@@ -14,7 +14,7 @@ public class ghostAgent : MonoBehaviour
     private NavMeshAgent agent;
     public int mode;
     private float timer;
-    private float timeSet = 0.2f;
+    private float timeSet = 0.5f;
     private RaycastHit hit;
     private int lastmode = 0;
     private float stall = 1f;
@@ -31,6 +31,7 @@ public class ghostAgent : MonoBehaviour
             // Patrol
             agent.destination = waypoints[0].position;
         }
+        agent.autoRepath = false;
     }
 
     void FixedUpdate()
