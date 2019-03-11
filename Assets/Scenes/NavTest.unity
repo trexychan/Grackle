@@ -2595,6 +2595,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a374465f02e4e548992b103fa4cabf5, type: 3}
+--- !u!1 &1268814955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 959049527255067712, guid: 5547c2c66345c0b47a9e2a43bc543c9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1927504259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1268814956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268814955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44399599c56cdc84a98cc0ecae26ee79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  waypoints:
+  - {fileID: 745313671}
+  - {fileID: 1949232296}
+  - {fileID: 889916679}
+  - {fileID: 704439689}
+  seePlayer: 0
+  mode: 0
+  surf: {fileID: 1369410863}
 --- !u!1 &1331171737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +2958,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surfs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1615059978}
@@ -2954,6 +2985,14 @@ PrefabInstance:
       propertyPath: mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surfs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1369410868}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surf
+      value: 
+      objectReference: {fileID: 1369410863}
     - target: {fileID: 1111068215, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
       propertyPath: m_AgentTypeID
       value: -334000983
@@ -4400,6 +4439,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surfs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1615059978}
@@ -4421,6 +4464,22 @@ PrefabInstance:
       objectReference: {fileID: 704439689}
     - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
       propertyPath: mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surfs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1369410868}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surfs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1369410868}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: surf
+      value: 
+      objectReference: {fileID: 1369410863}
+    - target: {fileID: 2051026991, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1111068215, guid: 5547c2c66345c0b47a9e2a43bc543c9f, type: 3}
@@ -4844,6 +4903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovementFilter
       objectReference: {fileID: 0}
+    - target: {fileID: 8737540762229986927, guid: ac31a056abd248b41b7c69ad63167c94,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 8737540762130655721, guid: ac31a056abd248b41b7c69ad63167c94,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4933,11 +4997,6 @@ PrefabInstance:
         type: 3}
       propertyPath: w
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8737540762229986927, guid: ac31a056abd248b41b7c69ad63167c94,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8737540762229986928, guid: ac31a056abd248b41b7c69ad63167c94,
         type: 3}
