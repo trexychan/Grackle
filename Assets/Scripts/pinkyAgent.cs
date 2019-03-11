@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ghostAgent : MonoBehaviour
+public class pinkyAgent : MonoBehaviour
 {
 
     public Transform target;
@@ -18,6 +18,9 @@ public class ghostAgent : MonoBehaviour
     private RaycastHit hit;
     private int lastmode = 0;
     private float stall = 1f;
+    public GameObject surf;
+    private int myID;
+    private int altID;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,15 @@ public class ghostAgent : MonoBehaviour
             agent.destination = waypoints[0].position;
         }
         agent.autoRepath = false;
+        NavMeshSurface[] surfs = surf.GetComponents<NavMeshSurface>();
+        int[] agentIDs = new int[surfs.Length];
+        foreach (NavMeshSurface surf in surfs) {
+            if (surf.agentTypeID != agent.agentTypeID) {
+                altID = surf.agentTypeID;
+                break;
+            }
+        }
+        myID = agent.agentTypeID;
     }
 
     void FixedUpdate()
@@ -70,6 +82,15 @@ public class ghostAgent : MonoBehaviour
             if (hit.transform == target) {
                 seePlayer = true;
             }
+        }
+        if (seePlayer) {
+            if (agent.agentTypeID == myID) {
+                Debug.Log(agent.agentTypeID);
+                agent.agentTypeID = altID;
+            }
+        } else if (agent.agentTypeID == altID) {
+            Debug.Log(agent.agentTypeID);
+            agent.agentTypeID = myID;
         }
     }
 
