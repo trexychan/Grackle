@@ -10,7 +10,7 @@ public class bullet_script : MonoBehaviour
 
 	void Start()
 	{
-		life = 1;
+		life = 4;
 	}
 
     // Update is called once per frame
@@ -27,8 +27,9 @@ public class bullet_script : MonoBehaviour
 
 	void OnTriggerEnter( Collider other )
 	{
-		if ( other.tag != "bullet" )
+		if ( other.tag != "bullet" && other.tag != "gun" && other.tag != "Player" )
 		{
+			Debug.Log( "bullet hit " + other.tag);
 			Destroy( gameObject );
 		}
 	}
