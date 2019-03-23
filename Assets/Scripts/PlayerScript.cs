@@ -41,50 +41,52 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if ( Input.GetKeyDown( KeyCode.Alpha3 ) )
-		{
-			SaveGunState();
-			SetRPGActive();
-		}
-		if ( Input.GetKeyDown( KeyCode.Alpha2 ) )
-		{
-			SaveGunState();
-			SetShotgunActive();
-		}
-		if ( Input.GetKeyDown( KeyCode.Alpha1 ) )
-		{
-			SaveGunState();
-			SetPistolActive();
-		}
-		if( Input.GetMouseButtonDown(0) ) {
-			shotgun_reload_in_progress = false;
-		}
-		if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) && loaded_ammo > 0 )
-		{
-			currentWeapon.Fire();
-			loaded_ammo--;
-		}
-		else if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) )
-		{
-			currentWeapon.OutOfAmmo();
-		} 
-		else if( reloading_timer <= 0 && ( Input.GetKeyDown( KeyCode.R ) || shotgun_reload_in_progress ) && loaded_ammo != capacity && ammo != 0 )
-		{
-			if ( Global.active_gun == 1 ) {
-				shotgun_reload_in_progress = true;
-				loaded_ammo++;
-				ammo--;
-			} else {
-				loaded_ammo = Math.Min(capacity,ammo);	
-				ammo = ammo - Math.Min(capacity,ammo);
+			if (!PauseMenuReal.IsPaused) {
+				if ( Input.GetKeyDown( KeyCode.Alpha3 ) )
+				{
+					SaveGunState();
+					SetRPGActive();
+				}
+				if ( Input.GetKeyDown( KeyCode.Alpha2 ) )
+				{
+					SaveGunState();
+					SetShotgunActive();
+				}
+				if ( Input.GetKeyDown( KeyCode.Alpha1 ) )
+				{
+					SaveGunState();
+					SetPistolActive();
+				}
+				if( Input.GetMouseButtonDown(0) ) {
+					shotgun_reload_in_progress = false;
+				}
+				if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) && loaded_ammo > 0 )
+				{
+					currentWeapon.Fire();
+					loaded_ammo--;
+				}
+				else if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) )
+				{
+					currentWeapon.OutOfAmmo();
+				} 
+				else if( reloading_timer <= 0 && ( Input.GetKeyDown( KeyCode.R ) || shotgun_reload_in_progress ) && loaded_ammo != capacity && ammo != 0 )
+				{
+					if ( Global.active_gun == 1 ) {
+						shotgun_reload_in_progress = true;
+						loaded_ammo++;
+						ammo--;
+					} else {
+						loaded_ammo = Math.Min(capacity,ammo);	
+						ammo = ammo - Math.Min(capacity,ammo);
+					}
+					currentWeapon.Reload();
+					reloading_timer = reload_time;
+				}
+				else if( reloading_timer > 0 ) 
+				{
+					reloading_timer = reloading_timer - ( 1 * Time.deltaTime );
+				}
 			}
-			currentWeapon.Reload();
-			reloading_timer = reload_time;
-		}
-		else if( reloading_timer > 0 ) 
-		{
-			reloading_timer = reloading_timer - ( 1 * Time.deltaTime );
-		}
     }
 
 
