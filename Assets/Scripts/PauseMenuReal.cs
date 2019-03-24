@@ -7,14 +7,11 @@ public class PauseMenuReal : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
-    public string MainMenu;
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (IsPaused) {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
             } else {
                 Cursor.visible = true;
@@ -25,7 +22,9 @@ public class PauseMenuReal : MonoBehaviour
     }
     public void Resume() {
         pauseMenuUI.SetActive(false);
-        IsPaused = false;
+		IsPaused = false;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
     }
     void Pause() {
@@ -39,8 +38,16 @@ public class PauseMenuReal : MonoBehaviour
         Application.Quit();
     }
     public void QuitToMenu() {
+		Resume();
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
         Debug.Log("Quitting to Menu.");
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(MainMenu);
+        SceneManager.LoadScene("MainMenu");
     }
+
+	public void Restart(){
+		Resume();
+		Debug.Log("Restarting");
+		SceneManager.LoadScene( "Dungeon" );
+	}
 }

@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
 	public int capacity;
 	public int loaded_ammo;
 
+	public bool alive = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +43,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-			if (!PauseMenuReal.IsPaused) {
+			if (!PauseMenuReal.IsPaused && alive ) {
 				if ( Input.GetKeyDown( KeyCode.Alpha3 ) )
 				{
 					SaveGunState();
@@ -153,8 +155,11 @@ public class PlayerScript : MonoBehaviour
 	{
 		if ( other.tag.Equals("Ghost") )
 		{
+			alive = false;
 			Debug.Log("Crickey mate");
 			deathScreen.gameObject.SetActive(true);
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 			Time.timeScale = 0f;
 			GetComponent<FirstPersonController>().enabled = false;
 		}
