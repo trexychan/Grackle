@@ -10,7 +10,7 @@ public class ghostAgent : MonoBehaviour
     public Transform[] waypoints;
 	public bool alwaysChase = false;
     public bool seePlayer = false;
-    private int layermask = ~(1 << 9);
+    private int layermask = ~(1 << 8);
     public int currWaypoint = -1;
     private NavMeshAgent agent;
     public int mode;
