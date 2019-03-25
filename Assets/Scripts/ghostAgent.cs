@@ -8,16 +8,26 @@ public class ghostAgent : MonoBehaviour
 
     public Transform target;
     public Transform[] waypoints;
+	public bool alwaysChase = false;
     public bool seePlayer = false;
     private int layermask = ~(1 << 9);
-    private int curWaypoint = 0;
+    public int currWaypoint = -1;
     private NavMeshAgent agent;
     public int mode;
     private float timer;
-    private float timeSet = 0.5f;
+    private float timeSet = 4f;
     private RaycastHit hit;
     private int lastmode = 0;
-    private float stall = 1f;
+    public float stall = 1f;
+
+	private void setNextWaypoint(){ 
+		try {
+			currWaypoint = (currWaypoint + 1) % waypoints.Length;
+			agent.SetDestination(waypoints[currWaypoint].transform.position);
+		} catch {
+			Debug.Log ( "Next Waypoint cannot be set due to array indexing issue or array is of length 0 " );
+		}
+	}
 
     // Start is called before the first frame update
     void Start()
@@ -29,57 +39,81 @@ public class ghostAgent : MonoBehaviour
             timer = timeSet;
         } else {
             // Patrol
-            agent.destination = waypoints[0].position;
+			setNextWaypoint ();
         }
         agent.autoRepath = false;
     }
 
     void FixedUpdate()
     {
-        if (mode == 0) {
-            // Chase
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                timer = timeSet;
-                agent.destination = target.position;
-            }
-        } else if (mode == 1) {
-            // Patrol
-            Vector3 r = agent.destination - transform.position;
-            r.y = 0;
-            if (r.magnitude < .5) {
-                curWaypoint++;
-                if (curWaypoint >= waypoints.Length) {
-                    curWaypoint = 0;
-                }
-                agent.destination = waypoints[curWaypoint].position;
-            }
-        } else {
-            if ( stall == 0 )
-            {
-                stall = 1f;
-                mode = lastmode;
-            }
-            else {
-                stall = stall - Time.deltaTime;
-            }
-        }
+		if (alwaysChase){
+			if (stall > 1 ){
+				if ( stall < 0 )
+				{
+					stall = 1f;
+					mode = lastmode;
+				}
+				else {
+					stall -= Time.deltaTime;
+				}
+			} else {
+				agent.destination = target.position;
+			}
 
-        seePlayer = false;
-        if (Physics.Raycast(transform.position, target.position - transform.position, out hit, Mathf.Infinity, layermask)) {
-            if (hit.transform == target) {
-                seePlayer = true;
-            }
-        }
+		} else {
+			if (Physics.Raycast(transform.position, target.position - transform.position, out hit, Mathf.Infinity, layermask)) {
+				if (hit.transform == target) {
+					seePlayer = true;
+				} else {
+					seePlayer = false;
+				}		
+			}
+
+	        if (mode == 0) {
+				agent.destination = target.position;
+	            // Chase
+				if (!seePlayer){
+					if (timer < 0){
+						setNextWaypoint();
+						mode = 1;
+					} else {
+						timer -= Time.deltaTime;
+					}
+				} else {
+					timer = timeSet;
+				}
+			} else if (mode == 1) {
+	            // Patrol
+				if (seePlayer){
+					currWaypoint--;
+					agent.destination = target.position;
+					mode = 0;
+				} else if (agent.remainingDistance < .5 && !agent.pathPending) {
+					setNextWaypoint ();
+				}
+	        } else {
+	            if ( stall < 0 )
+	            {
+	                stall = 1f;
+	                mode = lastmode;
+	            }
+	            else {
+	                stall -= Time.deltaTime;
+	            }
+	        }
+		}     
     }
+
 
     void OnTriggerEnter( Collider other )
     {
         if ( other.tag.Equals("bullet") )
         {
             Debug.Log("shot");
+			stall += .3f;
             lastmode = mode;
-            mode = 0;
+			agent.destination = transform.position;
+            mode = 2;
         }
         
     }

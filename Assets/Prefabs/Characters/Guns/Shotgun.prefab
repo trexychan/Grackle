@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4328216172794215079, guid: 87a3b1c1519c22a46b27c38efd60459b, type: 3}
-  bulletsPerShot: 20
+  bulletsPerShot: 10
   gunshot: {fileID: 8300000, guid: c3f4f88949df18c4681a162665724e29, type: 3}
   reload: {fileID: 8300000, guid: 687edab7cd84ade40b113a31368d41bf, type: 3}
   out_of_ammo: {fileID: 8300000, guid: be0b0da4f0289d744a5b16551b0e9693, type: 3}

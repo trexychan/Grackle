@@ -20,7 +20,6 @@ public static class Global
 	public const float shotgun_reload_time = .5f;
 	public const float rpg_reload_time = 6;
 
-	//public static const transform.position pistol_start_position = 0,0,0;  
 }
 
 
