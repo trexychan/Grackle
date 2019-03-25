@@ -16,7 +16,7 @@ public class pistol_shooting : MonoBehaviour, Gun
 
 	public void Fire()
 	{
-		Instantiate( bullet, transform.position, transform.rotation );
+		Instantiate( bullet, transform.position, transform.rotation);
 		gunshot_source.Play();
 	}
 
