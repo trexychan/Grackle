@@ -16,11 +16,10 @@ public static class Global
 	public static int loaded_shotgun_ammo = 6;
 	public static int loaded_rpg_ammo = 0;
 
-	public const float pistol_reload_time = 3;
-	public const float shotgun_reload_time = 5;
+	public const float pistol_reload_time = 2.5f;
+	public const float shotgun_reload_time = .5f;
 	public const float rpg_reload_time = 6;
 
-	//public static const transform.position pistol_start_position = 0,0,0;  
 }
 
 

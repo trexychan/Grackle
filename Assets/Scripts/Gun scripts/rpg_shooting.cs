@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class pistol_shooting : MonoBehaviour, Gun
+public class rpg_shooting : MonoBehaviour, Gun
 {
 	public GameObject 	bullet;
 	public float     	reload_time;
@@ -16,7 +16,7 @@ public class pistol_shooting : MonoBehaviour, Gun
 
 	public void Fire()
 	{
-		Instantiate( bullet, transform.position, transform.rotation);
+		Instantiate( bullet, transform.position, transform.rotation );
 		gunshot_source.Play();
 	}
 

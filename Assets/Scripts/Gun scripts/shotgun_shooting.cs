@@ -34,7 +34,6 @@ public class shotgun_shooting : MonoBehaviour, Gun
             bullets[i] = Random.rotation;
             GameObject p = Instantiate(bullet, transform.position, transform.rotation);
             p.transform.rotation = Quaternion.RotateTowards(p.transform.rotation, bullets[i], spreadAngle);
-            //p.GetComponent<Rigidbody>().AddForce(p.transform.right * bullet_speed);
 		}
 		gunshot_source.Play();
 		
