@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class BushGenerator : MonoBehaviour {
 
-	public Dictionary<GameObject, int> bushes;
+	[System.Serializable]
+	public struct Bush {
+		public GameObject bush;
+		public int weight;
+	}
+
+	public Bush[] bushes;
 
 	public float length;
 
     void Start() {
 		int totalWeight = 0;
-		foreach (KeyValuePair<GameObject, int> kvp in bushes) {
-			totalWeight += kvp.Value;
+		foreach (Bush bush in bushes) {
+			totalWeight += bush.weight;
 		}
 
 		float z = -length / 2;
@@ -20,7 +26,16 @@ public class BushGenerator : MonoBehaviour {
 
 			if (z + size / 2 > length / 2) break;
 
-			GameObject bush = Instantiate(bushes[Random.Range(0, bushes.Length)], this.transform);
+			int bushIndex = Random.Range(0, totalWeight);
+
+			GameObject bush = null;
+			int total = 0;
+			foreach (Bush b in bushes) {
+				if ((total += b.weight) > bushIndex) {
+					bush = Instantiate(b.bush, this.transform);
+					break;
+				}
+			}
 
 			bush.transform.localScale = size * Vector3.one;
 

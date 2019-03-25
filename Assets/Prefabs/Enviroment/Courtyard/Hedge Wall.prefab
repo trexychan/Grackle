@@ -150,9 +150,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bushes:
-  - {fileID: 100000, guid: 53414ab72ac45614684af7a6985b2c85, type: 3}
-  - {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
-  - {fileID: 100000, guid: e26c36c102d821c4581a911b1e80588f, type: 3}
-  - {fileID: 100000, guid: 532066205bc320d4aa4647332e9d2ffa, type: 3}
-  - {fileID: 100000, guid: ebc45ba3ff076884e92c0f152cc3b98e, type: 3}
+  - bush: {fileID: 100000, guid: 53414ab72ac45614684af7a6985b2c85, type: 3}
+    weight: 6
+  - bush: {fileID: 100000, guid: 35483354210b51844a7110a01c7b4f3a, type: 3}
+    weight: 2
+  - bush: {fileID: 100000, guid: e26c36c102d821c4581a911b1e80588f, type: 3}
+    weight: 1
+  - bush: {fileID: 100000, guid: 532066205bc320d4aa4647332e9d2ffa, type: 3}
+    weight: 5
+  - bush: {fileID: 100000, guid: ebc45ba3ff076884e92c0f152cc3b98e, type: 3}
+    weight: 3
   length: 6
