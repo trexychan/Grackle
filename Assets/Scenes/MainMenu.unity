@@ -856,31 +856,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Project Lead - Benjamin Yarmowich
-
-    Artificial Intelligence - Zachary Goddard
-
-    Dungeon Layout - Eric Glunn
-
-    Mansion Layout - Ethan Yu
-
-    Courtyard Layout - Ethan Tillson
-
-    Main Menu Art - Shannon Ke
-
-    Cut Scene/ Death Screen Art - Miranda Bisson
-
-    Pause Menu / Maze Music - Amri Paravath
-
-    Enemy Design - Miranda Bisson
-
-    Skull Pickups / Doors - Stephen Kamali
-
-    Character / Animations - Benjamin Yarmowich
-
-    Shotgun - Marcelo Costa
-
-    RPG - Ethan Yu'
+  m_Text: "Project Lead - Benjamin Yarmowich\r\nArtificial Intelligence - Zachary
+    Goddard\r\nDungeon Layout - Eric Glunn\r\nMansion Layout / RPG  - Ethan Yu\r\nCourtyard
+    Layout - Ethan Tillson\r\nMain Menu Art - Shannon Ke\r\nCut Scene/ Death Screen
+    Art / Enemy Design - Miranda Bisson\r\nAmmo Pickups / Maze Music - Amrithesh Paravath\r\nSkull
+    Pickups / Doors - Stephen Kamali\r\nShotgun - Marcelo Costa"
 --- !u!222 &543062047
 CanvasRenderer:
   m_ObjectHideFlags: 0
