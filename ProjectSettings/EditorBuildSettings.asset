@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: a20b992fd6d805a4ca12fbf0292630d1
+  - enabled: 0
+    path: Assets/Scenes/Maze3.unity
+    guid: 4d363d50979407840b63c591c6f6ef43
   m_configObjects: {}
