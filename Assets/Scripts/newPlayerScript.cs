@@ -51,7 +51,7 @@ public class newPlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		pos = mesh.position;
+		pos = mesh.localPosition;
 		if (!PauseMenuReal.IsPaused && alive ) {
 			/*
 			if (  Global.active_gun != 2 && Input.GetKeyDown( KeyCode.Alpha3 ) )
@@ -63,14 +63,14 @@ public class newPlayerScript : MonoBehaviour
 			*/
 			if ( Global.active_gun != 1 && Input.GetKeyDown( KeyCode.Alpha2 ) )
 			{
-				mesh.position = new Vector3(mesh.position.x, mesh.position.y - .23f, mesh.position.z);
+				mesh.localPosition = new Vector3(mesh.localPosition.x, mesh.localPosition.y - .23f, mesh.localPosition.z);
 				anim.SetInteger("Gun", 1);
 				SaveGunState();
 				SetShotgunActive();
 			}
 			if ( Global.active_gun != 0 && Input.GetKeyDown( KeyCode.Alpha1 ) )
 			{
-				mesh.position = new Vector3(mesh.position.x, mesh.position.y + .23f, mesh.position.z);
+				mesh.localPosition = new Vector3(mesh.localPosition.x, mesh.localPosition.y + .23f, mesh.localPosition.z);
 				anim.SetInteger("Gun", 0);
 				SaveGunState();
 				SetPistolActive();

@@ -9,7 +9,8 @@ public class pinkyAgent : MonoBehaviour
     public Transform target;
     public Transform[] waypoints;
     public bool seePlayer = false;
-    private int layermask = ~(1 << 9);
+    private int visionCount = 0;
+    private int layermask = ~(1 << 8);
     private int curWaypoint = 0;
     private NavMeshAgent agent;
     public int mode;
@@ -83,14 +84,21 @@ public class pinkyAgent : MonoBehaviour
                 seePlayer = true;
             }
         }
+        //Debug.Log(seePlayer);
         if (seePlayer) {
             if (agent.agentTypeID == myID) {
-                Debug.Log(agent.agentTypeID);
+                //Debug.Log(agent.agentTypeID);
                 agent.agentTypeID = altID;
+            } else {
+                visionCount = 0;
             }
         } else if (agent.agentTypeID == altID) {
-            Debug.Log(agent.agentTypeID);
-            agent.agentTypeID = myID;
+            visionCount++;
+            if (visionCount > 15) {
+                //Debug.Log(agent.agentTypeID);
+                agent.agentTypeID = myID;
+                visionCount = 0;
+            }
         }
     }
 
