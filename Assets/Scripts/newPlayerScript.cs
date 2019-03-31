@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class newPlayerScript : MonoBehaviour
 {
@@ -61,37 +62,37 @@ public class newPlayerScript : MonoBehaviour
 				SetRPGActive();
 			}
 			*/
-			if ( Global.active_gun != 1 && Input.GetKeyDown( KeyCode.Alpha2 ) )
+			if ( Global.active_gun != 1 && CrossPlatformInputManager.GetButtonDown("Weapon2") )
 			{
 				mesh.position = new Vector3(mesh.position.x, mesh.position.y - .23f, mesh.position.z);
 				anim.SetInteger("Gun", 1);
 				SaveGunState();
 				SetShotgunActive();
 			}
-			if ( Global.active_gun != 0 && Input.GetKeyDown( KeyCode.Alpha1 ) )
+			if ( Global.active_gun != 0 && CrossPlatformInputManager.GetButtonDown("Weapon1") )
 			{
 				mesh.position = new Vector3(mesh.position.x, mesh.position.y + .23f, mesh.position.z);
 				anim.SetInteger("Gun", 0);
 				SaveGunState();
 				SetPistolActive();
 			}
-			if( Input.GetMouseButtonDown(0) ) {
+			if( CrossPlatformInputManager.GetButtonDown("Fire1") ) {
 				shotgun_reload_in_progress = false;
 			}
 			if (fire_delay_timer < 0 ){
 				anim.ResetTrigger("Shoot");
-				if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) && loaded_ammo > 0 )
+				if( reloading_timer <= 0 && CrossPlatformInputManager.GetButtonDown("Fire1") && loaded_ammo > 0 )
 				{
 					fire_delay_timer = fire_delay;
 					anim.SetTrigger("Shoot");
 					currentWeapon.Fire();
 					loaded_ammo--;
 				}
-				else if( reloading_timer <= 0 && Input.GetMouseButtonDown(0) )
+				else if( reloading_timer <= 0 && CrossPlatformInputManager.GetButtonDown("Fire1") )
 				{
 					currentWeapon.OutOfAmmo();
 				} 
-				else if( reloading_timer <= 0 && ( Input.GetKeyDown( KeyCode.R ) || shotgun_reload_in_progress ) && loaded_ammo != capacity && ammo != 0 )
+				else if( reloading_timer <= 0 && ( CrossPlatformInputManager.GetButtonDown("Reload") || shotgun_reload_in_progress ) && loaded_ammo != capacity && ammo != 0 )
 				{
 					anim.SetTrigger("Reload");
 					if ( Global.active_gun == 1 ) {
