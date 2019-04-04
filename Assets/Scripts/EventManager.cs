@@ -8,6 +8,7 @@ public class EventManager : MonoBehaviour
     public static event SkullsCollectedHandler OnSkullsCollected;
     public static void SkullsCollected()
     {
+        SkullPickup.ResetSkullCount();
         OnSkullsCollected?.Invoke();
     }
 }
