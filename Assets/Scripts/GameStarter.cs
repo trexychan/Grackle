@@ -17,7 +17,7 @@ public class GameStarter : MonoBehaviour
 	}
 
 	public void StartGame(){
-		SceneManager.LoadScene( "Dungeon" );
+		SceneManager.LoadScene( "Opening Cut Scene" );
 	}
 
 	public void Settings(){
