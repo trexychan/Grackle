@@ -7,14 +7,17 @@ public class ExitScript : MonoBehaviour
     private AudioSource audioSrc;
     private bool isOpen;
     private Quaternion rotationGoal;
+    private float swingDirection;
 
     public float rotationSpeed = 10f;
+    public bool reverseSwingDirection;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
         isOpen = false;
+        swingDirection = reverseSwingDirection ? 90f : -90f;
         EventManager.OnSkullsCollected += Exit;
     }
 
@@ -36,8 +39,12 @@ public class ExitScript : MonoBehaviour
 
     void Exit()
     {
-        audioSrc.Play();
-        rotationGoal = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y - 90f, 0);
+        if (audioSrc)
+            audioSrc.Play();
+
+        EventManager.OnSkullsCollected -= Exit;
+
+        rotationGoal = Quaternion.Euler(0f, transform.localRotation.eulerAngles.y + swingDirection, 0);
         isOpen = true;
     }
 }

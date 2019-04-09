@@ -35,4 +35,10 @@ public class SkullPickup : MonoBehaviour
             Destroy(gameObject, audioSrc.clip.length);
         }
     }
+
+    public static void ResetSkullCount()
+    {
+        skullCount = 0;
+        skullInitial = 0;
+    }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Ghost
   - Fire
   - wall
+  - DeathScreen
+  - gun
   layers:
   - Default
   - TransparentFX

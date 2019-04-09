@@ -2023,7 +2023,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.2
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -3383,8 +3383,8 @@ MonoBehaviour:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
-    MinimumX: 0
-    MaximumX: 0
+    MinimumX: -90
+    MaximumX: 90
     smooth: 0
     smoothTime: 5
     lockCursor: 1
@@ -3498,7 +3498,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.228
   m_Pitch: 1
   Loop: 0
   Mute: 0
