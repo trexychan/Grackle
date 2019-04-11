@@ -2120,15 +2120,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2499732880821884207}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7413397, y: -0.68259275, z: -0.021243572}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 2.68}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2499732880822306957}
   - {fileID: 2499732880822307081}
   m_Father: {fileID: 4618705788644155762}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &2499732880814630765
 Animator:
   serializedVersion: 3
@@ -2165,6 +2165,75 @@ MonoBehaviour:
   seePlayer: 0
   mode: 0
   surf: {fileID: 0}
+--- !u!1 &3048089126333501213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7146879427021470421}
+  - component: {fileID: 5895042646860489998}
+  m_Layer: 0
+  m_Name: Directional Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7146879427021470421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048089126333501213}
+  m_LocalRotation: {x: -0.6469652, y: 0.12584183, z: 0.57572603, w: 0.4838796}
+  m_LocalPosition: {x: -0.023, y: 0.774, z: -0.0335}
+  m_LocalScale: {x: 0.3333336, y: 0.33333352, z: 0.3333336}
+  m_Children: []
+  m_Father: {fileID: 4618705788631302031}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -50.444004, y: -78.111, z: 141.74101}
+--- !u!108 &5895042646860489998
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048089126333501213}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 0, g: 0.95156765, b: 1, a: 1}
+  m_Intensity: 0.25
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &4618705788644155761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,10 +2245,10 @@ GameObject:
   - component: {fileID: 4618705788644155762}
   - component: {fileID: 4618705788644156045}
   - component: {fileID: 4618705788644156044}
-  - component: {fileID: 4618705788644155763}
   - component: {fileID: 4618705788644156046}
+  - component: {fileID: 3941771790107167375}
   m_Layer: 8
-  m_Name: Crawler
+  m_Name: Cyan Crawler
   m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2193,8 +2262,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4618705788644155761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7286602, y: 0.51259273, z: 5.1044497}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 2499732880822307087}
   m_Father: {fileID: 0}
@@ -2305,7 +2374,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4618705788644155761}
   m_Enabled: 1
   m_AgentTypeID: -334000983
-  m_Radius: 1.5
+  m_Radius: 2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2315,26 +2384,9 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4618705788644155763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618705788644155761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44399599c56cdc84a98cc0ecae26ee79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  waypoints: []
-  seePlayer: 0
-  mode: 0
-  surf: {fileID: 0}
 --- !u!136 &4618705788644156046
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2345,10 +2397,29 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.0771203
-  m_Height: 4.236071
-  m_Direction: 0
-  m_Center: {x: -0.5, y: 0.5, z: 0}
+  m_Radius: 2
+  m_Height: 6
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3941771790107167375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618705788644155761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3db4ffc1d721246b00ff56b9ae3a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  waypoints: []
+  alwaysChase: 0
+  seePlayer: 0
+  currWaypoint: -1
+  mode: 0
+  stall: 1
 --- !u!1001 &4618705788631688489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2356,10 +2427,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2499732880822306947}
     m_Modifications:
-    - target: {fileID: 100038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
-      propertyPath: m_Name
-      value: crow_head6
-      objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0011
@@ -2415,6 +2482,10 @@ PrefabInstance:
     - target: {fileID: 400038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
+      propertyPath: m_Name
+      value: crow_head6
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_Controller

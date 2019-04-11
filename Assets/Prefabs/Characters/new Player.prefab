@@ -3373,8 +3373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 3
-  m_RunSpeed: 6
+  m_WalkSpeed: 4
+  m_RunSpeed: 8
   m_RunstepLenghten: 0.138
   m_JumpSpeed: 2
   m_StickToGroundForce: 1

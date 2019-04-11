@@ -111,7 +111,9 @@ public class ghostAgent : MonoBehaviour
         {
             Debug.Log("shot");
 			stall += .3f;
-            lastmode = mode;
+			if (mode < 2) {
+            	lastmode = mode;
+			}
 			agent.destination = transform.position;
             mode = 2;
         }
