@@ -158,7 +158,7 @@ public class newPlayerScript : MonoBehaviour
 		Debug.Log("set RPG active");
 	}
 
-	void SaveGunState(){
+	public void SaveGunState(){
 		if ( Global.active_gun == 0 )
 		{
 			Global.pistol_ammo = ammo;

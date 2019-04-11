@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: 18003ee24e3fb1d4da1e0f452561ee14
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: AmericanCrow_v4textured:pCube6
+    100002: anim_controls_Grp
+    100004: cntrl_head
+    100006: cntrl_L_ankle
+    100008: cntrl_neck_01
+    100010: cntrl_neck_02
+    100012: cntrl_neck_03
+    100014: cntrl_R_ankle
+    100016: cntrl_root
+    100018: cntrl_tail_01
+    100020: cntrl_tail_02
+    100022: cntrl_thumb_L
+    100024: cntrl_thumb_R
+    100026: cntrl_toe_L_b2
+    100028: cntrl_toe_L_c1
+    100030: cntrl_toe_L_c2
+    100032: cntrl_toe_R_b
+    100034: cntrl_toe_R_c
+    100036: cntrl_toe_R_c1
+    100038: //RootNode
+    100040: global_rig_Grp
+    100042: ik_grp
+    100044: ikHandle1
+    100046: ikHandle2
+    100048: jnt_beak_01
+    100050: jnt_beak_02
+    100052: jnt_beak_02_end
+    100054: jnt_beakLowerJawROTATE
+    100056: jnt_eye_L
+    100058: jnt_eye_L_end
+    100060: jnt_eye_R
+    100062: jnt_eye_R_end
+    100064: jnt_head
+    100066: jnt_L_foot_root
+    100068: jnt_L_hip
+    100070: jnt_L_knee
+    100072: jnt_L_thumb_01
+    100074: jnt_L_thumb_02
+    100076: jnt_L_thumb_03
+    100078: jnt_L_thumb_04
+    100080: jnt_L_thumb_04_end
+    100082: jnt_L_toe_01_a
+    100084: jnt_L_toe_01_b
+    100086: jnt_L_toe_01_c
+    100088: jnt_L_toe_02_a
+    100090: jnt_L_toe_02_b
+    100092: jnt_L_toe_02_c
+    100094: jnt_L_toe_03_a
+    100096: jnt_L_toe_03_b
+    100098: jnt_L_toe_03_c
+    100100: jnt_L_toe_04_a
+    100102: jnt_L_toe_04_a_end
+    100104: jnt_L_toe_04_b
+    100106: jnt_L_toe_04_b_end
+    100108: jnt_L_toe_04_c
+    100110: jnt_L_toe_04_c_end
+    100112: jnt_L_toe_root_a
+    100114: jnt_L_toe_root_c
+    100116: jnt_midsection
+    100118: jnt_neck_01
+    100120: jnt_neck_02
+    100122: jnt_R_foot_root
+    100124: jnt_R_hip
+    100126: jnt_R_knee
+    100128: jnt_R_thumb_01
+    100130: jnt_R_thumb_02
+    100132: jnt_R_thumb_03
+    100134: jnt_R_thumb_04
+    100136: jnt_R_thumb_04_end
+    100138: jnt_R_toe_01_b
+    100140: jnt_R_toe_01_b.001
+    100142: jnt_R_toe_01_c
+    100144: jnt_R_toe_02_b
+    100146: jnt_R_toe_02_b.001
+    100148: jnt_R_toe_02_c
+    100150: jnt_R_toe_03_b
+    100152: jnt_R_toe_03_b.001
+    100154: jnt_R_toe_03_c
+    100156: jnt_R_toe_04_b
+    100158: jnt_R_toe_04_b.001
+    100160: jnt_R_toe_04_b.001_end
+    100162: jnt_R_toe_04_b_end
+    100164: jnt_R_toe_04_c
+    100166: jnt_R_toe_04_c_end
+    100168: jnt_R_toe_root_a
+    100170: jnt_R_toe_root_c
+    100172: jnt_Root
+    100174: jnt_tail_01
+    100176: jnt_tail_02
+    100178: jnt_tail_03END
+    100180: jnt_tail_03END_end
+    100182: leg_R_aim
+    100184: leg_R_aim1
+    100186: lowerBeakStart
+    100188: lowerBeakTIP
+    100190: lowerBeakTIP_end
+    100192: masterMesh
+    100194: robin_cntrl_master
+    100196: skeleton_Grp
+    400000: AmericanCrow_v4textured:pCube6
+    400002: anim_controls_Grp
+    400004: cntrl_head
+    400006: cntrl_L_ankle
+    400008: cntrl_neck_01
+    400010: cntrl_neck_02
+    400012: cntrl_neck_03
+    400014: cntrl_R_ankle
+    400016: cntrl_root
+    400018: cntrl_tail_01
+    400020: cntrl_tail_02
+    400022: cntrl_thumb_L
+    400024: cntrl_thumb_R
+    400026: cntrl_toe_L_b2
+    400028: cntrl_toe_L_c1
+    400030: cntrl_toe_L_c2
+    400032: cntrl_toe_R_b
+    400034: cntrl_toe_R_c
+    400036: cntrl_toe_R_c1
+    400038: //RootNode
+    400040: global_rig_Grp
+    400042: ik_grp
+    400044: ikHandle1
+    400046: ikHandle2
+    400048: jnt_beak_01
+    400050: jnt_beak_02
+    400052: jnt_beak_02_end
+    400054: jnt_beakLowerJawROTATE
+    400056: jnt_eye_L
+    400058: jnt_eye_L_end
+    400060: jnt_eye_R
+    400062: jnt_eye_R_end
+    400064: jnt_head
+    400066: jnt_L_foot_root
+    400068: jnt_L_hip
+    400070: jnt_L_knee
+    400072: jnt_L_thumb_01
+    400074: jnt_L_thumb_02
+    400076: jnt_L_thumb_03
+    400078: jnt_L_thumb_04
+    400080: jnt_L_thumb_04_end
+    400082: jnt_L_toe_01_a
+    400084: jnt_L_toe_01_b
+    400086: jnt_L_toe_01_c
+    400088: jnt_L_toe_02_a
+    400090: jnt_L_toe_02_b
+    400092: jnt_L_toe_02_c
+    400094: jnt_L_toe_03_a
+    400096: jnt_L_toe_03_b
+    400098: jnt_L_toe_03_c
+    400100: jnt_L_toe_04_a
+    400102: jnt_L_toe_04_a_end
+    400104: jnt_L_toe_04_b
+    400106: jnt_L_toe_04_b_end
+    400108: jnt_L_toe_04_c
+    400110: jnt_L_toe_04_c_end
+    400112: jnt_L_toe_root_a
+    400114: jnt_L_toe_root_c
+    400116: jnt_midsection
+    400118: jnt_neck_01
+    400120: jnt_neck_02
+    400122: jnt_R_foot_root
+    400124: jnt_R_hip
+    400126: jnt_R_knee
+    400128: jnt_R_thumb_01
+    400130: jnt_R_thumb_02
+    400132: jnt_R_thumb_03
+    400134: jnt_R_thumb_04
+    400136: jnt_R_thumb_04_end
+    400138: jnt_R_toe_01_b
+    400140: jnt_R_toe_01_b.001
+    400142: jnt_R_toe_01_c
+    400144: jnt_R_toe_02_b
+    400146: jnt_R_toe_02_b.001
+    400148: jnt_R_toe_02_c
+    400150: jnt_R_toe_03_b
+    400152: jnt_R_toe_03_b.001
+    400154: jnt_R_toe_03_c
+    400156: jnt_R_toe_04_b
+    400158: jnt_R_toe_04_b.001
+    400160: jnt_R_toe_04_b.001_end
+    400162: jnt_R_toe_04_b_end
+    400164: jnt_R_toe_04_c
+    400166: jnt_R_toe_04_c_end
+    400168: jnt_R_toe_root_a
+    400170: jnt_R_toe_root_c
+    400172: jnt_Root
+    400174: jnt_tail_01
+    400176: jnt_tail_02
+    400178: jnt_tail_03END
+    400180: jnt_tail_03END_end
+    400182: leg_R_aim
+    400184: leg_R_aim1
+    400186: lowerBeakStart
+    400188: lowerBeakTIP
+    400190: lowerBeakTIP_end
+    400192: masterMesh
+    400194: robin_cntrl_master
+    400196: skeleton_Grp
+    2100000: AmericanCrow_v4textured_AmCrowTexture
+    4300000: masterMesh
+    7400000: skeleton_Grp|cntrl_head|Take 001|BaseLayer
+    7400002: skeleton_Grp|cntrl_L_ankle|Take 001|BaseLayer
+    7400004: skeleton_Grp|cntrl_neck_01|Take 001|BaseLayer
+    7400006: skeleton_Grp|cntrl_neck_02|Take 001|BaseLayer
+    7400008: skeleton_Grp|cntrl_R_ankle|Take 001|BaseLayer
+    7400010: skeleton_Grp|ikHandle1|Take 001|BaseLayer
+    7400012: skeleton_Grp|ikHandle2|Take 001|BaseLayer
+    7400014: skeleton_Grp|skeleton_Grp|Take 001|BaseLayer
+    7400016: cntrl_neck_02|cntrl_head|Take 001|BaseLayer
+    7400018: cntrl_neck_02|cntrl_L_ankle|Take 001|BaseLayer
+    7400020: cntrl_neck_02|cntrl_neck_01|Take 001|BaseLayer
+    7400022: cntrl_neck_02|cntrl_neck_02|Take 001|BaseLayer
+    7400024: cntrl_neck_02|cntrl_R_ankle|Take 001|BaseLayer
+    7400026: cntrl_neck_02|ikHandle1|Take 001|BaseLayer
+    7400028: cntrl_neck_02|ikHandle2|Take 001|BaseLayer
+    7400030: cntrl_neck_01|cntrl_head|Take 001|BaseLayer
+    7400032: cntrl_neck_01|cntrl_L_ankle|Take 001|BaseLayer
+    7400034: cntrl_neck_01|cntrl_neck_01|Take 001|BaseLayer
+    7400036: cntrl_neck_01|cntrl_neck_02|Take 001|BaseLayer
+    7400038: cntrl_neck_01|cntrl_R_ankle|Take 001|BaseLayer
+    7400040: cntrl_neck_01|ikHandle1|Take 001|BaseLayer
+    7400042: cntrl_neck_01|ikHandle2|Take 001|BaseLayer
+    7400044: cntrl_head|cntrl_head|Take 001|BaseLayer
+    7400046: cntrl_head|cntrl_L_ankle|Take 001|BaseLayer
+    7400048: cntrl_head|cntrl_neck_01|Take 001|BaseLayer
+    7400050: cntrl_head|cntrl_neck_02|Take 001|BaseLayer
+    7400052: cntrl_head|cntrl_R_ankle|Take 001|BaseLayer
+    7400054: cntrl_head|ikHandle1|Take 001|BaseLayer
+    7400056: cntrl_head|ikHandle2|Take 001|BaseLayer
+    7400058: cntrl_L_ankle|cntrl_head|Take 001|BaseLayer
+    7400060: cntrl_L_ankle|cntrl_L_ankle|Take 001|BaseLayer
+    7400062: cntrl_L_ankle|cntrl_neck_01|Take 001|BaseLayer
+    7400064: cntrl_L_ankle|cntrl_neck_02|Take 001|BaseLayer
+    7400066: cntrl_L_ankle|cntrl_R_ankle|Take 001|BaseLayer
+    7400068: cntrl_L_ankle|ikHandle1|Take 001|BaseLayer
+    7400070: cntrl_L_ankle|ikHandle2|Take 001|BaseLayer
+    7400072: cntrl_R_ankle|cntrl_head|Take 001|BaseLayer
+    7400074: cntrl_R_ankle|cntrl_L_ankle|Take 001|BaseLayer
+    7400076: cntrl_R_ankle|cntrl_neck_01|Take 001|BaseLayer
+    7400078: cntrl_R_ankle|cntrl_neck_02|Take 001|BaseLayer
+    7400080: cntrl_R_ankle|cntrl_R_ankle|Take 001|BaseLayer
+    7400082: cntrl_R_ankle|ikHandle1|Take 001|BaseLayer
+    7400084: cntrl_R_ankle|ikHandle2|Take 001|BaseLayer
+    7400086: ikHandle2|cntrl_head|Take 001|BaseLayer
+    7400088: ikHandle2|cntrl_L_ankle|Take 001|BaseLayer
+    7400090: ikHandle2|cntrl_neck_01|Take 001|BaseLayer
+    7400092: ikHandle2|cntrl_neck_02|Take 001|BaseLayer
+    7400094: ikHandle2|cntrl_R_ankle|Take 001|BaseLayer
+    7400096: ikHandle2|ikHandle1|Take 001|BaseLayer
+    7400098: ikHandle2|ikHandle2|Take 001|BaseLayer
+    7400100: ikHandle1|cntrl_head|Take 001|BaseLayer
+    7400102: ikHandle1|cntrl_L_ankle|Take 001|BaseLayer
+    7400104: ikHandle1|cntrl_neck_01|Take 001|BaseLayer
+    7400106: ikHandle1|cntrl_neck_02|Take 001|BaseLayer
+    7400108: ikHandle1|cntrl_R_ankle|Take 001|BaseLayer
+    7400110: ikHandle1|ikHandle1|Take 001|BaseLayer
+    7400112: ikHandle1|ikHandle2|Take 001|BaseLayer
+    9500000: //RootNode
+    13700000: masterMesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

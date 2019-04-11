@@ -18,7 +18,7 @@ public class pinkyAgent : MonoBehaviour
     private float timeSet = 0.5f;
     private RaycastHit hit;
     private int lastmode = 0;
-    private float stall = 1f;
+    public float stall = 1f;
     public GameObject surf;
     private int myID;
     private int altID;
@@ -67,15 +67,15 @@ public class pinkyAgent : MonoBehaviour
                 }
                 agent.destination = waypoints[curWaypoint].position;
             }
-        } else {
-            if ( stall == 0 )
-            {
-                stall = 1f;
-                mode = lastmode;
-            }
-            else {
-                stall = stall - Time.deltaTime;
-            }
+		} else {
+			if ( stall < 0 )
+			{
+				stall = 1f;
+				mode = lastmode;
+			}
+			else {
+				stall -= Time.deltaTime;
+			}
         }
 
         seePlayer = false;
@@ -102,14 +102,18 @@ public class pinkyAgent : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter( Collider other )
-    {
-        if ( other.tag.Equals("bullet") )
-        {
-            Debug.Log("shot");
-            lastmode = mode;
-            mode = 0;
-        }
-        
-    }
+	void OnTriggerEnter( Collider other )
+	{
+		if ( other.tag.Equals("bullet") )
+		{
+			Debug.Log("shot");
+			stall += .3f;
+			if (mode < 2) {
+				lastmode = mode;
+			}
+			agent.destination = transform.position;
+			mode = 2;
+		}
+
+	}
 }
