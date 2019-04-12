@@ -7,6 +7,7 @@ public class PauseMenuReal : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
+	public GameObject crosshair;
 	public System.String level = "Dungeon";
     // Update is called once per frame
     void Update()
@@ -48,7 +49,18 @@ public class PauseMenuReal : MonoBehaviour
 
 	public void Restart(){
 		Resume();
+		SkullPickup.ResetSkullCount();
 		Debug.Log("Restarting");
+		Global.active_gun = 0;
 		SceneManager.LoadScene( level );
+	}
+
+	public void ToggleCrossHair(){
+		Debug.Log(crosshair.activeSelf);
+		if (crosshair.activeSelf){
+			crosshair.SetActive(false);
+		} else {
+			crosshair.SetActive(true);
+		};
 	}
 }

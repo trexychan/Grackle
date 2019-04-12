@@ -23,6 +23,9 @@ public class ExitScript : MonoBehaviour
 
     void Update()
     {
+		if (Input.GetKeyDown(KeyCode.Return)){
+			Exit();
+		}
         // Spherically interpolate 90 degrees
         if (isOpen)
         {

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkullPickup : MonoBehaviour
 {
-    private static int skullCount;
-    private static int skullInitial;
+    public static int skullCount;
+    public static int skullInitial;
+	public Text counter;
 
     private AudioSource audioSrc;
     private MeshRenderer meshRenderer;
@@ -28,10 +30,12 @@ public class SkullPickup : MonoBehaviour
             meshRenderer.enabled = false;
 
             skullCount--;
-
-            if (skullCount == 0)
+			Debug.Log("Skulls remaining" +skullCount);
+			counter.text = "SKULLS REMAINING: "+skullCount;
+			if (skullCount == 0){
                 EventManager.SkullsCollected();
-
+				Debug.Log("Skulls collected");
+			}
             Destroy(gameObject, audioSrc.clip.length);
         }
     }

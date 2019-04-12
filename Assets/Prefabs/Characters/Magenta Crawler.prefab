@@ -2228,7 +2228,7 @@ GameObject:
   - component: {fileID: 4618705788644156045}
   - component: {fileID: 4618705788644156044}
   - component: {fileID: 4618705788644156046}
-  - component: {fileID: 3941771790107167375}
+  - component: {fileID: 3011077170506563072}
   m_Layer: 8
   m_Name: Magenta Crawler
   m_TagString: Ghost
@@ -2383,7 +2383,7 @@ CapsuleCollider:
   m_Height: 6
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3941771790107167375
+--- !u!114 &3011077170506563072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4618705788644155761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e3db4ffc1d721246b00ff56b9ae3a5a, type: 3}
+  m_Script: {fileID: 11500000, guid: a81d76ec3a5fdbf458a890648ac9833b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
@@ -2409,6 +2409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2499732880822306947}
     m_Modifications:
+    - target: {fileID: 100038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
+      propertyPath: m_Name
+      value: crow_head6
+      objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0011
@@ -2464,10 +2468,6 @@ PrefabInstance:
     - target: {fileID: 400038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 100038, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
-      propertyPath: m_Name
-      value: crow_head6
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 18003ee24e3fb1d4da1e0f452561ee14, type: 3}
       propertyPath: m_Controller
