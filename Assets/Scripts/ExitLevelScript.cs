@@ -23,7 +23,8 @@ public class ExitLevelScript : MonoBehaviour
         {
             img.CrossFadeAlpha(1.0f, fadeOutTime, false);
             StartCoroutine(WaitForFade());
-			other.GetComponent<newPlayerScript>().SaveGunState();
+			other.GetComponent<newPlayerScript>().SaveFinalGunState();
+			Global.active_gun = 0;
         }
     }
 

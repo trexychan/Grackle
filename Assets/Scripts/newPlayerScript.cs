@@ -33,6 +33,7 @@ public class newPlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		ReloadLastGunState();
 		mesh = transform.GetChild(0).GetChild(0);
 		anim = mesh.gameObject.GetComponent<Animator>();
 		if ( Global.active_gun == 0 )
@@ -176,6 +177,24 @@ public class newPlayerScript : MonoBehaviour
 		}
 	}
 
+	public void ReloadLastGunState(){
+		Global.pistol_ammo = Global.last_pistol_ammo;
+		Global.shotgun_ammo = Global.last_shotgun_ammo;
+		Global.rpg_ammo = Global.last_rpg_ammo;
+		Global.loaded_pistol_ammo = Global.last_loaded_pistol_ammo;
+		Global.loaded_shotgun_ammo = Global.last_loaded_shotgun_ammo;
+		Global.loaded_rpg_ammo = Global.last_loaded_rpg_ammo;
+	}
+
+	public void SaveFinalGunState(){
+		SaveGunState();
+		Global.last_pistol_ammo = Global.pistol_ammo;
+		Global.last_shotgun_ammo = Global.shotgun_ammo;
+		Global.last_rpg_ammo = Global.rpg_ammo;
+		Global.last_loaded_pistol_ammo = Global.loaded_pistol_ammo;
+		Global.last_loaded_shotgun_ammo = Global.loaded_shotgun_ammo;
+		Global.last_loaded_rpg_ammo = Global.loaded_rpg_ammo;
+	}
 
     void OnTriggerEnter( Collider other )
 	{

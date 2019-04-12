@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 120
-  ammoPerBox: 10
+  ammoPerBox: 4
 --- !u!1 &3584920010040856911
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class PauseMenuReal : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
+	public System.String level = "Dungeon";
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +49,6 @@ public class PauseMenuReal : MonoBehaviour
 	public void Restart(){
 		Resume();
 		Debug.Log("Restarting");
-		SceneManager.LoadScene( "Dungeon" );
+		SceneManager.LoadScene( level );
 	}
 }
