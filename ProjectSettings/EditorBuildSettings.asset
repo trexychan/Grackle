@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Opening Cut Scene.unity
     guid: 93b9e23a2f9c4ed4ca3c24f06bd05f1b
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 187d793d8cefd6848a56640cd1f3aaa5
+  - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: a20b992fd6d805a4ca12fbf0292630d1
   - enabled: 1
@@ -23,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maze3.unity
     guid: 4d363d50979407840b63c591c6f6ef43
-  - enabled: 1
-    path: Assets/Scenes/End Cut Scene.unity
-    guid: 568ac43861850d84e844015096785ca0
   m_configObjects: {}

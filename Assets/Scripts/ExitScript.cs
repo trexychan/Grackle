@@ -12,8 +12,10 @@ public class ExitScript : MonoBehaviour
     public float rotationSpeed = 10f;
     public bool reverseSwingDirection;
 
+    public static ExitScript instance;
+
     // Start is called before the first frame update
-    void Start()
+    void OnLevelWasLoaded()
     {
         audioSrc = GetComponent<AudioSource>();
         isOpen = false;
@@ -23,9 +25,6 @@ public class ExitScript : MonoBehaviour
 
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Return)){
-			Exit();
-		}
         // Spherically interpolate 90 degrees
         if (isOpen)
         {

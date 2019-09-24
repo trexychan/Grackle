@@ -27,6 +27,8 @@ public static class Global
 	public static int last_loaded_shotgun_ammo = 0;
 	public static int last_loaded_rpg_ammo = 0;
 
+	public static int game_mode = 0;  //0 = easy, 1 = more difficult, 2 = most difficult
+	public static bool crosshair = true;
 }
 
 

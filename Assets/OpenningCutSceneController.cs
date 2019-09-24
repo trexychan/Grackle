@@ -53,7 +53,9 @@ public class OpenningCutSceneController : MonoBehaviour
 		else if ( timer >= 13 && timer < 15){
 			float counter = timer - 13;
 			camera.transform.position = new Vector3( startPos.x + 9*Mathf.Sin( Mathf.PI * counter / 180f), startPos.y + 6*Mathf.Sin( Mathf.PI * counter / 180f), startPos.z );
-			camera.transform.Rotate( 0, 0, - (.34f * (counter/2)));
+			camera.transform.Rotate( 0, 0, - ( Time.deltaTime * 25.29f / 2.0f ) );
+			//camera.transform.Rotate( 0, 0, - (.34f * (counter/2)));
+
 			y = camera.transform.position.y;
 		}
 		else if ( timer >= 15 && timer < 16){
@@ -65,7 +67,7 @@ public class OpenningCutSceneController : MonoBehaviour
 			camera.transform.position = new Vector3( camera.transform.position.x, camera.transform.position.y, startPos.z  + counter );
 		}
 		else if (timer >= 17){
-			SceneManager.LoadScene("Dungeon");
+			SceneManager.LoadScene("Tutorial");
 		}
 	}
 		

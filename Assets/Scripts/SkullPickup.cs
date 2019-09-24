@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SkullPickup : MonoBehaviour
 {
     public static int skullCount;
     public static int skullInitial;
-	public Text counter;
 
     private AudioSource audioSrc;
     private MeshRenderer meshRenderer;
@@ -30,13 +28,21 @@ public class SkullPickup : MonoBehaviour
             meshRenderer.enabled = false;
 
             skullCount--;
-			Debug.Log("Skulls remaining" +skullCount);
-			counter.text = "SKULLS REMAINING: "+skullCount;
+			Debug.Log("Skulls remaining " +skullCount);
 			if (skullCount == 0){
-                EventManager.SkullsCollected();
+                bool ok = false;
+                while ( !ok ){
+                    try {
+                        EventManager.SkullsCollected();
+                        ok = true;
+                    } catch {
+                        Debug.Log("Caught MissingReferenceException");
+                    }
+                }
+                
 				Debug.Log("Skulls collected");
 			}
-            Destroy(gameObject, audioSrc.clip.length);
+			Destroy(gameObject, audioSrc.clip.length);
         }
     }
 
