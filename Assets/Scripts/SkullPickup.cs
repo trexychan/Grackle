@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SkullPickup : MonoBehaviour
 {
-    private static int skullCount;
-    private static int skullInitial;
+    public static int skullCount;
+    public static int skullInitial;
 
     private AudioSource audioSrc;
     private MeshRenderer meshRenderer;
@@ -28,11 +28,21 @@ public class SkullPickup : MonoBehaviour
             meshRenderer.enabled = false;
 
             skullCount--;
-
-            if (skullCount == 0)
-                EventManager.SkullsCollected();
-
-            Destroy(gameObject, audioSrc.clip.length);
+			Debug.Log("Skulls remaining " +skullCount);
+			if (skullCount == 0){
+                bool ok = false;
+                while ( !ok ){
+                    try {
+                        EventManager.SkullsCollected();
+                        ok = true;
+                    } catch {
+                        Debug.Log("Caught MissingReferenceException");
+                    }
+                }
+                
+				Debug.Log("Skulls collected");
+			}
+			Destroy(gameObject, audioSrc.clip.length);
         }
     }
 
