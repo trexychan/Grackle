@@ -12,8 +12,10 @@ public class ExitScript : MonoBehaviour
     public float rotationSpeed = 10f;
     public bool reverseSwingDirection;
 
+    public static ExitScript instance;
+
     // Start is called before the first frame update
-    void Start()
+    void OnLevelWasLoaded()
     {
         audioSrc = GetComponent<AudioSource>();
         isOpen = false;

@@ -10,6 +10,8 @@ TagManager:
   - wall
   - DeathScreen
   - gun
+  - Interact
+  - Skull
   layers:
   - Default
   - TransparentFX
